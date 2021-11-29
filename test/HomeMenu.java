@@ -31,17 +31,17 @@ public class HomeMenu extends JComponent implements MouseListener, MouseMotionLi
     private static final String GREETINGS = "Welcome to:";
     private static final String GAME_TITLE = "Brick Destroy";
     private static final String CREDITS = "Version 0.1";
-    private static final String START_TEXT = "Start";
-    private static final String MENU_TEXT = "Exit";
+    private static final String START_TEXT = "START";
+    private static final String MENU_TEXT = "QUIT";
 
-    private static final Color BG_COLOR = Color.GREEN.darker();
+    private static final Color BG_COLOR = Color.WHITE;
     private static final Color BORDER_COLOR = new Color(200,8,21); //Venetian Red
     private static final Color DASH_BORDER_COLOR = new  Color(255, 216, 0);//school bus yellow
     private static final Color TEXT_COLOR = new Color(16, 52, 166);//egyptian blue
     private static final Color CLICKED_BUTTON_COLOR = BG_COLOR.brighter();
     private static final Color CLICKED_TEXT = Color.WHITE;
-    private static final int BORDER_SIZE = 5;
-    private static final float[] DASHES = {12,6};
+    private static final int BORDER_SIZE = 10;
+    private static final float[] DASHES = {20,10};
 
     private Rectangle menuFace;
     private Rectangle startButton;
@@ -87,7 +87,7 @@ public class HomeMenu extends JComponent implements MouseListener, MouseMotionLi
         greetingsFont = new Font("Noto Mono",Font.PLAIN,25);
         gameTitleFont = new Font("Noto Mono",Font.BOLD,40);
         creditsFont = new Font("Monospaced",Font.PLAIN,10);
-        buttonFont = new Font("Monospaced",Font.PLAIN,startButton.height-2);
+        buttonFont = new Font("Impact",Font.PLAIN,startButton.height-2);
 
 
 
