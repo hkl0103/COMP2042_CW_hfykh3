@@ -33,6 +33,7 @@ public class HomeMenu extends JComponent implements MouseListener, MouseMotionLi
     private static final String CREDITS = "Version 0.1";
     private static final String START_TEXT = "START";
     private static final String MENU_TEXT = "QUIT";
+    private static final String INFO_TEXT = "HELP"; //do info at start menu
 
     private static final Color BG_COLOR = Color.WHITE;
     private static final Color BORDER_COLOR = new Color(200,8,21); //Venetian Red
