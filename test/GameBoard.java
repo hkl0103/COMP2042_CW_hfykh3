@@ -31,7 +31,7 @@ public class GameBoard extends JComponent implements KeyListener,MouseListener,M
     private static final String EXIT = "Exit";
     private static final String PAUSE = "Pause Menu";
     private static final int TEXT_SIZE = 30;
-    private static final Color MENU_COLOR = new Color(0,255,0);
+    private static final Color MENU_COLOR = new Color(94, 137, 229);
 
 
     private static final int DEF_WIDTH = 600;
@@ -70,7 +70,7 @@ public class GameBoard extends JComponent implements KeyListener,MouseListener,M
 
         this.initialize();
         message = "";
-        wall = new Wall(new Rectangle(0,0,DEF_WIDTH,DEF_HEIGHT),30,3,6/2,new Point(300,430));
+        wall = new Wall(new Rectangle(0,0,DEF_WIDTH,DEF_HEIGHT),35,4,6/2,new Point(300,430));
 
         debugConsole = new DebugConsole(owner,wall,this);
         //initialize the first level
@@ -125,7 +125,7 @@ public class GameBoard extends JComponent implements KeyListener,MouseListener,M
 
         clear(g2d);
 
-        g2d.setColor(Color.BLUE);
+        g2d.setColor(Color.WHITE);
         g2d.drawString(message,250,225);
 
         drawBall(wall.ball,g2d);
@@ -270,10 +270,10 @@ public class GameBoard extends JComponent implements KeyListener,MouseListener,M
     @Override
     public void keyPressed(KeyEvent keyEvent) {
         switch(keyEvent.getKeyCode()){
-            case KeyEvent.VK_A:
+            case KeyEvent.VK_LEFT:
                 wall.player.moveLeft();
                 break;
-            case KeyEvent.VK_D:
+            case KeyEvent.VK_RIGHT:
                 wall.player.movRight();
                 break;
             case KeyEvent.VK_ESCAPE:
