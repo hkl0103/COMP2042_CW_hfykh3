@@ -32,6 +32,7 @@ public class GameFrame extends JFrame implements WindowFocusListener {
     private GameBoard gameBoard;
     private HomeMenu homeMenu;
 
+
     private boolean gaming;
 
     public GameFrame(){
