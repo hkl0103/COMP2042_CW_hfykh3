@@ -7,37 +7,47 @@ import java.awt.*;
 
 public class Info {
 
-    private JLabel label = new JLabel("<html><p>Hello World!</p></html>", SwingConstants.RIGHT);
+    private JFrame frame = new JFrame("Instruction of the game");
 
-    private JLabel hey = new JLabel("<html><p>8888888<br/>9999999</p></html>", SwingConstants.LEFT);
-    private JFrame frame = new JFrame();
+    ImageIcon start;
+    JLabel swording;
+
+
+
+
 
 
 
     public Info() {
 
+
         // the panel with text
         JPanel panel = new JPanel();
-        panel.setBorder(BorderFactory.createEmptyBorder(200, 200, 200, 200));
+        panel.setBorder(BorderFactory.createEmptyBorder(100, 100, 100, 100));
 
         //set the size of the frame
         Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
         int height = screenSize.height;
         int width = screenSize.width;
-        frame.setSize(width/6, height/2);
-
-        //layout the text
-        panel.add(label);
-        panel.add(hey);
-
 
         // set up the frame and display it
         frame.add(panel, BorderLayout.CENTER);
         frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        frame.setSize(500,300);
         frame.setLocationRelativeTo(null); // here's the part where i center the jframe on screen
-        frame.setTitle("Instruction of the game");
-        frame.pack();
         frame.setVisible(true);
+
+        //layout the text
+
+        start = new ImageIcon(getClass().getResource("picture/start.jpg"));
+        swording = new JLabel(start);
+        frame.add(swording);
+
+        //panel.add(sWording);
+        //("<html><p>Press to START the game</p></html>",start, SwingConstants.HORIZONTAL);
+
     }
+
+
 
 }
