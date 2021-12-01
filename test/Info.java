@@ -31,7 +31,6 @@ public class Info {
         int width = screenSize.width;
 
         // set up the frame and display it
-        frame.add(panel, BorderLayout.CENTER);
         frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frame.setSize(500,300);
         frame.setLocationRelativeTo(null); // here's the part where i center the jframe on screen
@@ -39,10 +38,10 @@ public class Info {
 
         //layout the text
 
-        start = new ImageIcon(getClass().getResource("picture/start.jpg"));
-        swording = new JLabel(start);
+        start = new ImageIcon(getClass().getResource("/start.png"));
+        JLabel swording = new JLabel(start);
         frame.add(swording);
-
+        //frame.setVisible(true);
         //panel.add(sWording);
         //("<html><p>Press to START the game</p></html>",start, SwingConstants.HORIZONTAL);
 
