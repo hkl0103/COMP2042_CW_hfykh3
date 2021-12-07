@@ -13,7 +13,7 @@ public class ClayBrick extends Brick {
 
     private static final String NAME = "Clay Brick";
     private static final Color DEF_INNER = new Color(105, 28, 28).darker();
-    private static final Color DEF_BORDER = Color.black;
+    private static final Color DEF_BORDER = new Color(180, 46, 46);
     private static final int CLAY_STRENGTH = 1;
 
 
