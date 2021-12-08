@@ -27,11 +27,12 @@ import java.awt.event.WindowListener;
 
 public class GameFrame extends JFrame implements WindowFocusListener {
 
-    private static final String DEF_TITLE = "Instruction of the GAME";
+    private static final String DEF_TITLE = "Brick Destory";
 
     private GameBoard gameBoard;
     private HomeMenu homeMenu;
-    private Info infomenu;
+    private Info infoMenu;
+    private Scoreboard scoreBoard;
 
 
     private boolean gaming;
@@ -45,9 +46,11 @@ public class GameFrame extends JFrame implements WindowFocusListener {
 
         gameBoard = new GameBoard(this);
 
-        homeMenu = new HomeMenu(this,new Dimension(500,350));
+        homeMenu = new HomeMenu(this,new Dimension(500,380));
 
-        infomenu = new Info(this,new Dimension(200,200));
+        infoMenu = new Info(this,new Dimension(200,200));
+
+        scoreBoard = new Scoreboard(this,new Dimension(500,380));
 
         this.add(homeMenu,BorderLayout.CENTER);
 
@@ -77,7 +80,7 @@ public class GameFrame extends JFrame implements WindowFocusListener {
     public void enableInfo() {
         this.dispose();
         this.remove(homeMenu);
-        this.add(infomenu, BorderLayout.CENTER);
+        this.add(infoMenu, BorderLayout.CENTER);
         this.setUndecorated(false);
         initialize();
         /*to avoid problems with graphics focus controller is added here*/
@@ -86,9 +89,28 @@ public class GameFrame extends JFrame implements WindowFocusListener {
 
     public void enableHomeMenu() {
         this.dispose();
-        this.remove(infomenu);
+        this.remove(infoMenu);
         this.add(homeMenu, BorderLayout.CENTER);
         this.setUndecorated(false);
+        initialize();
+        /*to avoid problems with graphics focus controller is added here*/
+        this.addWindowFocusListener(this);
+    }
+    public void enableHomeMenuscore() {
+        this.dispose();
+        this.remove(scoreBoard);
+        this.add(homeMenu, BorderLayout.CENTER);
+        this.setUndecorated(false);
+        initialize();
+        /*to avoid problems with graphics focus controller is added here*/
+        this.addWindowFocusListener(this);
+    }
+
+    public void enableScoreboard() {
+        this.dispose();
+        this.remove(homeMenu);
+        this.add(scoreBoard, BorderLayout.CENTER); //or add leaderboard or scoreboard, now test homemenu?
+        this.setUndecorated(true);
         initialize();
         /*to avoid problems with graphics focus controller is added here*/
         this.addWindowFocusListener(this);
