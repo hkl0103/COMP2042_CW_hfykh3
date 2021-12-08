@@ -48,7 +48,6 @@ public class Info extends JComponent implements MouseListener, MouseMotionListen
 
         Dimension btnDim = new Dimension(area.width / 2, area.height / 10);
         backButton = new Rectangle(btnDim);
-        //.setVisible(false);
 
         infoHeaderFont = new Font("Impact",Font.PLAIN,30);
         textFont = new Font("Noto Mono", Font.PLAIN, 20);
@@ -105,8 +104,8 @@ public class Info extends JComponent implements MouseListener, MouseMotionListen
         FontRenderContext frc = g2d.getFontRenderContext();
 
         Rectangle2D instructionsRect = textFont.getStringBounds(homeMenu,frc);
-        int xText = (int)(menuFace.getWidth() + instructionsRect.getWidth()) / 15;
-        int yText = (int)(menuFace.getHeight() / 3);
+        int xText = (int)(menuFace.getWidth()+ instructionsRect.getWidth()) / 15;
+        int yText = (int)(menuFace.getHeight() / 4);
 
         g2d.setFont(textFont);
         g2d.drawString(homeMenu,xText,yText);
@@ -161,9 +160,8 @@ public class Info extends JComponent implements MouseListener, MouseMotionListen
 
         g2d.setFont(buttonFont);
 
-        int x = (menuFace.width - backButton.width) / 5;
-        int y =(int) ((menuFace.height - backButton.height) * 1.5);
-
+        int x = ((menuFace.width + backButton.width )) ;
+        int y =(int) ((menuFace.height * 5 + backButton.height * 8 )/4);
         backButton.setLocation(x,y);
 
         x = (int)(backButton.getWidth() - buttonTextRect.getWidth()) / 2;
