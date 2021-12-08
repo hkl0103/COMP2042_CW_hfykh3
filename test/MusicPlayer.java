@@ -1,9 +1,8 @@
 package test;
 
-import javax.sound.sampled.AudioInputStream;
-import javax.sound.sampled.Clip;
-import javax.sound.sampled.AudioSystem;
+import javax.sound.sampled.*;
 import java.io.File;
+import java.io.IOException;
 
 public class MusicPlayer {
 
@@ -11,15 +10,19 @@ public class MusicPlayer {
     {
         try
         {
+            //input audio
             AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(new File(soundName).getAbsoluteFile( ));
             Clip clip = AudioSystem.getClip( );
             clip.open(audioInputStream);
             clip.start( );
-        }
-        catch(Exception ex)
-        {
+            clip.start();
+        } catch (UnsupportedAudioFileException e) { //play music in loop
             System.out.println("Error with playing sound.");
-            ex.printStackTrace( );
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (LineUnavailableException e) {
+            e.printStackTrace();
         }
     }
 }
