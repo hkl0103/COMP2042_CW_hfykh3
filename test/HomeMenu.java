@@ -17,6 +17,9 @@
  */
 package test;
 
+import javax.sound.sampled.AudioInputStream;
+import javax.sound.sampled.AudioSystem;
+import javax.sound.sampled.Clip;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.MouseEvent;
@@ -24,6 +27,7 @@ import java.awt.event.MouseListener;
 import java.awt.event.MouseMotionListener;
 import java.awt.font.FontRenderContext;
 import java.awt.geom.Rectangle2D;
+import java.io.File;
 
 
 public class HomeMenu extends JComponent implements MouseListener, MouseMotionListener {
@@ -135,6 +139,9 @@ public class HomeMenu extends JComponent implements MouseListener, MouseMotionLi
 
     private void drawContainer(Graphics2D g2d){
 
+        MusicPlayer bgm = new MusicPlayer();
+        bgm.playSound("Sound/backgroundmusic.wav");
+
         Image background = Toolkit.getDefaultToolkit().getImage("picture/brick.jpg");
 
         Color prev = g2d.getColor();
@@ -159,6 +166,28 @@ public class HomeMenu extends JComponent implements MouseListener, MouseMotionLi
         g2d.drawImage(background, 0, 0, this);
 
     }
+
+   // private void playSound(String musicLocation) {
+        //try
+        //{
+           // File musicPath = new File(musicLocation);
+            //if (musicPath.exists())
+            //{
+              //  AudioInputStream audioInput = AudioSystem.getAudioInputStream(musicPath);
+              //  Clip clip = AudioSystem.getClip();
+               // clip.start();
+          //  }
+           // else
+           // {
+             //   System.out.println("Error. Music Not found!");
+           // }
+
+      //  }
+       // catch(Exception ex)
+        //{
+         //   ex.printStackTrace();
+      //  }
+   // }
 
     private void drawText(Graphics2D g2d){
 
@@ -285,7 +314,7 @@ public class HomeMenu extends JComponent implements MouseListener, MouseMotionLi
         y = (int) (scoreButton.getHeight() - sTxtRect.getHeight()) / 2;
 
         x += scoreButton.x;
-        y += scoreButton.y + (scoreButton.height*1);
+        y += scoreButton.y + (scoreButton.height * 1);
 
 
         if (scoreClicked) {
@@ -311,8 +340,7 @@ public class HomeMenu extends JComponent implements MouseListener, MouseMotionLi
             owner.enableInfo();
         }
         else  if(scoreButton.contains(p)){
-            System.out.println("Goodbye " + System.getProperty("user.name"));
-            System.exit(0);
+            owner.enableScoreboard();
         }
         else if(menuButton.contains(p)){
             System.out.println("Goodbye " + System.getProperty("user.name"));
