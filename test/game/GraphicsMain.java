@@ -15,31 +15,17 @@
  *  You should have received a copy of the GNU General Public License
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package test;
+package test.game;
+
+import test.controller.GameFrame;
 
 import java.awt.*;
-import java.awt.geom.Ellipse2D;
-import java.awt.geom.Point2D;
-
-public class RubberBall extends Ball {
 
 
-    private static final int DEF_RADIUS = 15;
-    private static final Color DEF_INNER_COLOR = new Color(210, 199, 199);
-    private static final Color DEF_BORDER_COLOR = DEF_INNER_COLOR.darker().darker();
+public class GraphicsMain {
 
-
-    public RubberBall(Point2D center){
-        super(center,DEF_RADIUS,DEF_RADIUS,DEF_INNER_COLOR,DEF_BORDER_COLOR);
+    public static void main(String[] args){
+        EventQueue.invokeLater(() -> new GameFrame().initialize());
     }
 
-
-    @Override
-    protected Shape makeBall(Point2D center, int radiusA, int radiusB) {
-
-        double x = center.getX() - (radiusA / 1);
-        double y = center.getY() - (radiusB / 1);
-
-        return new Ellipse2D.Double(x,y,radiusA,radiusB);
-    }
 }

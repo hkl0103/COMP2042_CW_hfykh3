@@ -1,4 +1,4 @@
-package test;
+package test.model;
 
 import java.awt.*;
 import java.awt.Point;
@@ -177,7 +177,7 @@ abstract public class Brick  {
     private static Random rnd;
 
     private String name;
-    Shape brickFace;
+    public Shape brickFace;
 
     private Color border;
     private Color inner;

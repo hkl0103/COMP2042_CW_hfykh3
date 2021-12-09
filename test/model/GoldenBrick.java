@@ -15,25 +15,27 @@
  *  You should have received a copy of the GNU General Public License
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package test;
+package test.model;
+
+import test.model.Brick;
 
 import java.awt.*;
 import java.awt.geom.Point2D;
 import java.util.Random;
 
 
-public class SteelBrick extends Brick {
+public class GoldenBrick extends Brick {
 
-    private static final String NAME = "Steel Brick";
-    private static final Color DEF_INNER = new Color(203, 203, 201);
-    private static final Color DEF_BORDER = Color.WHITE;
-    private static final int STEEL_STRENGTH = 1;
-    private static final double STEEL_PROBABILITY = 0.4;
+    private static final String NAME = "Golden Brick";
+    private static final Color DEF_INNER = new Color(255, 192, 29);
+    private static final Color DEF_BORDER = new Color(131, 91, 4);
+    private static final int STEEL_STRENGTH = 3;
+    private static final double GOLDEN_PROBABILITY = 0.9;
 
     private Random rnd;
     private Shape brickFace;
 
-    public SteelBrick(Point point, Dimension size){
+    public GoldenBrick(Point point, Dimension size){
         super(NAME,point,size,DEF_BORDER,DEF_INNER,STEEL_STRENGTH);
         rnd = new Random();
         brickFace = super.brickFace;
@@ -58,7 +60,7 @@ public class SteelBrick extends Brick {
     }
 
     public void impact(){
-        if(rnd.nextDouble() < STEEL_PROBABILITY){
+        if(rnd.nextDouble() < GOLDEN_PROBABILITY){
             super.impact();
         }
     }

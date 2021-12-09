@@ -15,7 +15,12 @@
  *  You should have received a copy of the GNU General Public License
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package test;
+package test.view;
+
+import test.controller.GameBoard;
+import test.model.Ball;
+import test.controller.DebugPanel;
+import test.model.Wall;
 
 import javax.swing.*;
 import java.awt.*;

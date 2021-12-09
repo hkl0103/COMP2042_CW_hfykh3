@@ -1,7 +1,8 @@
-package test;
+package test.view;
+
+import test.controller.GameFrame;
 
 import javax.swing.*;
-import javax.swing.Timer;
 import java.awt.*;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;

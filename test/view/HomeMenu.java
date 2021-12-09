@@ -15,7 +15,9 @@
  *  You should have received a copy of the GNU General Public License
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package test;
+package test.view;
+
+import test.controller.GameFrame;
 
 import javax.swing.*;
 import java.awt.*;
@@ -24,7 +26,6 @@ import java.awt.event.MouseListener;
 import java.awt.event.MouseMotionListener;
 import java.awt.font.FontRenderContext;
 import java.awt.geom.Rectangle2D;
-import java.io.File;
 
 
 public class HomeMenu extends JComponent implements MouseListener, MouseMotionListener {
@@ -36,7 +37,6 @@ public class HomeMenu extends JComponent implements MouseListener, MouseMotionLi
     private static final String INFO_TEXT = "HELP";
     private static final String MENU_TEXT = "QUIT";
     private static final String SCOREBOARD_TEXT = "HIGHSCORE";
-     //do info at start menu
 
 
     private static final Color BORDER_COLOR = new Color(200,8,21); //Venetian Red
@@ -141,7 +141,6 @@ public class HomeMenu extends JComponent implements MouseListener, MouseMotionLi
 
         Color prev = g2d.getColor();
 
-
         g2d.fill(menuFace);
 
         Stroke tmp = g2d.getStroke();
@@ -161,7 +160,6 @@ public class HomeMenu extends JComponent implements MouseListener, MouseMotionLi
         g2d.drawImage(background, 0, 0, this);
 
     }
-    
 
     private void drawText(Graphics2D g2d){
 

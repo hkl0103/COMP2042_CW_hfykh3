@@ -1,8 +1,9 @@
-package test;
+package test.model;
+
+import test.model.Brick;
 
 import java.awt.*;
 import java.awt.Point;
-import java.awt.geom.Point2D;
 
 
 /**

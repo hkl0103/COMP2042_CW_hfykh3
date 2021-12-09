@@ -1,5 +1,7 @@
-package test;
+package test.view;
 
+
+import test.controller.GameFrame;
 
 import javax.swing.*;
 import java.awt.*;
