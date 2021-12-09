@@ -84,6 +84,11 @@ public class GameBoard extends JComponent implements KeyListener,MouseListener,M
                 if(wall.ballEnd()){
                     wall.wallReset();
                     message = "Game over";
+                    //MusicPlayer bgm = new MusicPlayer();
+                    //bgm.playSound("Sound/wining effect.wav");
+                    //HomeMenu.getOwner().enableScoreboard();
+
+
                 }
                 wall.ballReset();
                 gameTimer.stop();
@@ -142,7 +147,7 @@ public class GameBoard extends JComponent implements KeyListener,MouseListener,M
         Toolkit.getDefaultToolkit().sync();
     }
 
-    private void clear(Graphics2D g2d){
+    private void clear(Graphics2D g2d){ //add sound effect
         Color tmp = g2d.getColor();
         g2d.setColor(BG_COLOR);
         g2d.fillRect(0,0,getWidth(),getHeight());

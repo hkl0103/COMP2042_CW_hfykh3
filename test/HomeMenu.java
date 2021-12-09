@@ -17,9 +17,6 @@
  */
 package test;
 
-import javax.sound.sampled.AudioInputStream;
-import javax.sound.sampled.AudioSystem;
-import javax.sound.sampled.Clip;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.MouseEvent;
@@ -82,9 +79,7 @@ public class HomeMenu extends JComponent implements MouseListener, MouseMotionLi
         this.addMouseMotionListener(this);
 
         this.owner = owner;
-
-
-
+        
         menuFace = new Rectangle(new Point(0,0),area);
         this.setPreferredSize(area);
 
@@ -166,28 +161,7 @@ public class HomeMenu extends JComponent implements MouseListener, MouseMotionLi
         g2d.drawImage(background, 0, 0, this);
 
     }
-
-   // private void playSound(String musicLocation) {
-        //try
-        //{
-           // File musicPath = new File(musicLocation);
-            //if (musicPath.exists())
-            //{
-              //  AudioInputStream audioInput = AudioSystem.getAudioInputStream(musicPath);
-              //  Clip clip = AudioSystem.getClip();
-               // clip.start();
-          //  }
-           // else
-           // {
-             //   System.out.println("Error. Music Not found!");
-           // }
-
-      //  }
-       // catch(Exception ex)
-        //{
-         //   ex.printStackTrace();
-      //  }
-   // }
+    
 
     private void drawText(Graphics2D g2d){
 
@@ -334,6 +308,7 @@ public class HomeMenu extends JComponent implements MouseListener, MouseMotionLi
         Point p = mouseEvent.getPoint();
         if(startButton.contains(p)){
            owner.enableGameBoard();
+           
         }
 
         else  if(infoButton.contains(p)){

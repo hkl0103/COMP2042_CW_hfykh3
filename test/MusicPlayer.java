@@ -15,8 +15,7 @@ public class MusicPlayer {
             Clip clip = AudioSystem.getClip( );
             clip.open(audioInputStream);
             clip.start( );
-            clip.start();
-        } catch (UnsupportedAudioFileException e) { //play music in loop
+        } catch (UnsupportedAudioFileException e) {
             System.out.println("Error with playing sound.");
             e.printStackTrace();
         } catch (IOException e) {
