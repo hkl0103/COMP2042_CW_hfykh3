@@ -1,8 +1,8 @@
-# Brick_Destroy:video_game:#
+# Brick_Destroy:video_game:
 This is a simple arcace video game.
 Player's goal is to destroy a wall with a small ball.
 
-## How To Play?##
+## How To Play?
 GameBoard:</br>
 The game has  very simple commmand:</br>
 SPACE > start/pause the game</br>
@@ -12,7 +12,7 @@ ESC > enter/exit pause menu</br>
 ALT+SHITF+F1 > open console</br>
 ***The game automatically pause if the frame loses focus***
 
-##Work Conducted##</br>
+## Work Conducted
 :round_pushpin:change the key to left arrow and right arrow instead of A & D</br>
 :round_pushpin:change font, colour and adjust the location of rubber ball</br>
 :round_pushpin:Added 2 new level Grass Brick, an easy level and Golden Brick, more difficult level</br>
