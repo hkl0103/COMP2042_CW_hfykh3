@@ -10,6 +10,7 @@ Left Arrow > move left the paddle
 Right Arrow > move rigth the paddle
 ESC > enter/exit pause menu
 ALT+SHITF+F1 > open console
+
 ***The game automatically pause if the frame loses focus***
 
 #Work Conducted
