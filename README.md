@@ -23,4 +23,7 @@ ALT+SHITF+F1 > open console</br>
 :round_pushpin:Creating score class to input scoring system</br>
 :round_pushpin:Added background music and sound effect for button</br>
 :round_pushpin:Remove the unused import classes from class i created and roiginal class</br>
+:round_pushpin:Implements MVC design pattern</br>
+:round_pushpin:Junits Testing on some Java class</br>
+:round_pushpin:Build-in Maven</br>
 
