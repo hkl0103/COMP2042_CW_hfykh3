@@ -1,0 +1,3 @@
+Alvins 50
+Hannah 30
+James  20
