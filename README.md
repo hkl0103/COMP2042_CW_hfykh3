@@ -26,4 +26,5 @@ ALT+SHITF+F1 > open console</br>
 :round_pushpin:Implements MVC design pattern</br>
 :round_pushpin:Junits Testing on some Java class</br>
 :round_pushpin:Build-in Maven</br>
+:round_pushpin:Created class diagram</br>
 
